@@ -27,13 +27,8 @@ body {
 
 .mapboxes {
     position: absolute;
-    height: 9px;
+    height: 2%;
     border: 2px solid black;
-}
-
-#AL {
-  right: 18%;
-  bottom: 19%;
 }
 
 
