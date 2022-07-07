@@ -77,3 +77,5 @@ for (let state in stateCapitals) {
 	map.appendChild(box);
   }
 }
+
+createBoxes();
