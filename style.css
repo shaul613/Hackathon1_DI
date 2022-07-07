@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-body{
-
-}
 
 #state_capital_boxes{
   display: flex;
@@ -16,7 +12,7 @@ body{
   border: black solid 1px;
   background-color: #ffffb1;
 }
-=======
+
 body {
     margin: 0px;
     box-sizing: border-box;
@@ -35,4 +31,3 @@ body {
     height: 5px;
     border: 2px solid black;
 }
->>>>>>> 43d8867c2ae73b9459efe9d2efdb83ef6f786764
