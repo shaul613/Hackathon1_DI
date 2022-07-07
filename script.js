@@ -1,6 +1,6 @@
 
 var stateCapitals = [
-	{ name: 'Montgomery', stateAbbrev: 'AL', top: , bottom: },
+	{ name: 'Montgomery', stateAbbrev: 'AL' },
 	{ name: 'Juneau', stateAbbrev: 'AK' },
 	{ name: 'Phoenix', stateAbbrev: 'AZ' },
 	{ name: 'Little Rock', stateAbbrev: 'AR' },
