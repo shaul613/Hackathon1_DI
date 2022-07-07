@@ -65,8 +65,6 @@ function createCapitalBoxes(){
 
 createCapitalBoxes();
 
-createBoxes();
-
 function createBoxes () {
 
 for (let state in stateCapitals) {
@@ -77,5 +75,3 @@ for (let state in stateCapitals) {
 	map.appendChild(box);
   }
 }
-
-createBoxes();
