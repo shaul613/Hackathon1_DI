@@ -65,6 +65,8 @@ function createCapitalBoxes(){
 
 createCapitalBoxes();
 
+createBoxes();
+
 function createBoxes () {
 
 for (let state in stateCapitals) {
