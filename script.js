@@ -52,19 +52,26 @@ var stateCapitals = [
 	{ name: 'Cheyenne', stateAbbrev: 'WY' }
 ];
 
-for(let i in stateCapitals){
-  let elm = document.createElement("div");
-  let text = document.createTextNode(stateCapitals[i].name);
-  elm.appendChild(text);
-  document.getElementById("state_capital_boxes").appendChild(elm);
+function createCapitalBoxes(){
+  for(let i in stateCapitals){
+    let elm = document.createElement("div");
+    let text = document.createTextNode(stateCapitals[i].name);
+    elm.appendChild(text);
+    elm.classList.add("capital_drag_box");
+    elm.setAttribute("draggable", "true");
+    document.getElementById("state_capital_boxes").appendChild(elm);
+  }
 }
 
+createCapitalBoxes();
+
 function createBoxes () {
-  for (let state in stateCapitals) {
-  	let box = document.createElement("div");
-  	box.setAttribute("id", stateCapitals[state].stateAbbrev);
-  	box.classList.add("mapboxes");
-  	let map = document.getElementById("map");
-  	map.appendChild(box);
-    }
+
+for (let state in stateCapitals) {
+	let box = document.createElement("div");
+	box.setAttribute("id", stateCapitals[state].stateAbbrev);
+	box.classList.add("mapboxes");
+	let map = document.getElementById("map");
+	map.appendChild(box);
+  }
 }

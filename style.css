@@ -1,3 +1,18 @@
+
+
+#state_capital_boxes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+.capital_drag_box{
+  padding: 1px;
+  border: black solid 1px;
+  background-color: #ffffb1;
+}
+
 body {
     margin: 0px;
     box-sizing: border-box;
