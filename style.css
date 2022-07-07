@@ -1,5 +1,3 @@
-
-
 #state_capital_boxes{
   display: flex;
   flex-wrap: wrap;
@@ -21,13 +19,21 @@ body {
 #map {
     width: 100vw;
     height: 80vh;
-    background-image: url(https://ontheworldmap.com/usa/usa-states-map-max.jpg);
+    background-image: url(https://images7.alphacoders.com/687/thumb-1920-687665.jpg);
     background-repeat: no-repeat;
     background-size: 100vw 80vh;
+    position: relative;
 }
 
 .mapboxes {
-    width: 20px;
-    height: 5px;
+    position: absolute;
+    height: 9px;
     border: 2px solid black;
 }
+
+#AL {
+  right: 18%;
+  bottom: 19%;
+}
+
+

@@ -1,55 +1,55 @@
 
 var stateCapitals = [
-	{ name: 'Montgomery', stateAbbrev: 'AL' },
-	{ name: 'Juneau', stateAbbrev: 'AK' },
-	{ name: 'Phoenix', stateAbbrev: 'AZ' },
-	{ name: 'Little Rock', stateAbbrev: 'AR' },
-	{ name: 'Sacramento', stateAbbrev: 'CA' },
-	{ name: 'Denver', stateAbbrev: 'CO' },
-	{ name: 'Hartford', stateAbbrev: 'CT' },
-	{ name: 'Dover', stateAbbrev: 'DE' },
-	{ name: 'Tallahassee', stateAbbrev: 'FL' },
-	{ name: 'Atlanta', stateAbbrev: 'GA' },
-	{ name: 'Honolulu', stateAbbrev: 'HI' },
-	{ name: 'Boise', stateAbbrev: 'ID' },
-	{ name: 'Springfield', stateAbbrev: 'IL' },
-	{ name: 'Indianapolis', stateAbbrev: 'IN' },
-	{ name: 'Des Moines', stateAbbrev: 'IA' },
-	{ name: 'Topeka', stateAbbrev: 'KS' },
-	{ name: 'Frankfort', stateAbbrev: 'KY' },
-	{ name: 'Baton Rouge', stateAbbrev: 'LA' },
-	{ name: 'Augusta', stateAbbrev: 'ME' },
-	{ name: 'Annapolis', stateAbbrev: 'MD' },
-	{ name: 'Boston', stateAbbrev: 'MA' },
-	{ name: 'Lansing', stateAbbrev: 'MI' },
-	{ name: 'Saint Paul', stateAbbrev: 'MN' },
-	{ name: 'Jackson', stateAbbrev: 'MS' },
-	{ name: 'Jefferson City', stateAbbrev: 'MO' },
-	{ name: 'Helena', stateAbbrev: 'MT' },
-	{ name: 'Lincoln', stateAbbrev: 'NE' },
-	{ name: 'Carson City', stateAbbrev: 'NV' },
-	{ name: 'Concord', stateAbbrev: 'NH' },
-	{ name: 'Trenton', stateAbbrev: 'NJ' },
-	{ name: 'Santa Fe', stateAbbrev: 'NM' },
-	{ name: 'Albany', stateAbbrev: 'NY' },
-	{ name: 'Raleigh', stateAbbrev: 'NC' },
-	{ name: 'Bismarck', stateAbbrev: 'ND' },
-	{ name: 'Columbus', stateAbbrev: 'OH' },
-	{ name: 'Oklahoma City', stateAbbrev: 'OK' },
-	{ name: 'Salem', stateAbbrev: 'OR' },
-	{ name: 'Harrisburg', stateAbbrev: 'PA' },
-	{ name: 'Providence', stateAbbrev: 'RI' },
-	{ name: 'Columbia', stateAbbrev: 'SC' },
-	{ name: 'Pierre', stateAbbrev: 'SD' },
-	{ name: 'Nashville', stateAbbrev: 'TN' },
-	{ name: 'Austin', stateAbbrev: 'TX' },
-	{ name: 'Salt Lake City', stateAbbrev: 'UT' },
-	{ name: 'Montpelier', stateAbbrev: 'VT' },
-	{ name: 'Richmond', stateAbbrev: 'VA' },
-	{ name: 'Olympia', stateAbbrev: 'WA' },
-	{ name: 'Charleston', stateAbbrev: 'WV' },
-	{ name: 'Madison', stateAbbrev: 'WI' },
-	{ name: 'Cheyenne', stateAbbrev: 'WY' }
+	{ name: 'Montgomery', stateAbbrev: 'AL', left: '67%', bottom: '32%', width: '40px'},
+	{ name: 'Juneau', stateAbbrev: 'AK', left: '18%', bottom: '19%', width: '40px'},
+	{ name: 'Phoenix', stateAbbrev: 'AZ', left: '18%', bottom: '35%', width: '40px'},
+	{ name: 'Little Rock', stateAbbrev: 'AR', left: '56%', bottom: '32%', width: '40px'},
+	{ name: 'Sacramento', stateAbbrev: 'CA', left: '10%', bottom: '43%', width: '40px'},
+	{ name: 'Denver', stateAbbrev: 'CO', left: '30%', bottom: '50%', width: '40px'},
+	{ name: 'Hartford', stateAbbrev: 'CT', left: '91%', bottom: '68%', width: '25px'},
+	{ name: 'Dover', stateAbbrev: 'DE', left: '', bottom: '', width: '40px'},
+	{ name: 'Tallahassee', stateAbbrev: 'FL', left: '', bottom: ''},
+	{ name: 'Atlanta', stateAbbrev: 'GA', left: '', bottom: ''},
+	{ name: 'Honolulu', stateAbbrev: 'HI', left: '', bottom: '' },
+	{ name: 'Boise', stateAbbrev: 'ID', left: '', bottom: '' },
+	{ name: 'Springfield', stateAbbrev: 'IL', left: '', bottom: '' },
+	{ name: 'Indianapolis', stateAbbrev: 'IN', left: '', bottom: '' },
+	{ name: 'Des Moines', stateAbbrev: 'IA', left: '', bottom: '' },
+	{ name: 'Topeka', stateAbbrev: 'KS', left: '', bottom: '' },
+	{ name: 'Frankfort', stateAbbrev: 'KY', left: '', bottom: '' },
+	{ name: 'Baton Rouge', stateAbbrev: 'LA', left: '', bottom: '' },
+	{ name: 'Augusta', stateAbbrev: 'ME', left: '', bottom: '' },
+	{ name: 'Annapolis', stateAbbrev: 'MD', left: '', bottom: '' },
+	{ name: 'Boston', stateAbbrev: 'MA', left: '', bottom: '' },
+	{ name: 'Lansing', stateAbbrev: 'MI', left: '', bottom: '' },
+	{ name: 'Saint Paul', stateAbbrev: 'MN', left: '', bottom: '' },
+	{ name: 'Jackson', stateAbbrev: 'MS', left: '', bottom: '' },
+	{ name: 'Jefferson City', stateAbbrev: 'MO', left: '', bottom: '' },
+	{ name: 'Helena', stateAbbrev: 'MT', left: '', bottom: '' },
+	{ name: 'Lincoln', stateAbbrev: 'NE', left: '', bottom: '' },
+	{ name: 'Carson City', stateAbbrev: 'NV', left: '', bottom: '' },
+	{ name: 'Concord', stateAbbrev: 'NH', left: '', bottom: '' },
+	{ name: 'Trenton', stateAbbrev: 'NJ', left: '', bottom: '' },
+	{ name: 'Santa Fe', stateAbbrev: 'NM', left: '', bottom: '' },
+	{ name: 'Albany', stateAbbrev: 'NY', left: '', bottom: '' },
+	{ name: 'Raleigh', stateAbbrev: 'NC', left: '', bottom: '' },
+	{ name: 'Bismarck', stateAbbrev: 'ND', left: '', bottom: '' },
+	{ name: 'Columbus', stateAbbrev: 'OH', left: '', bottom: '' },
+	{ name: 'Oklahoma City', stateAbbrev: 'OK', left: '', bottom: '' },
+	{ name: 'Salem', stateAbbrev: 'OR', left: '', bottom: '' },
+	{ name: 'Harrisburg', stateAbbrev: 'PA', left: '', bottom: '' },
+	{ name: 'Providence', stateAbbrev: 'RI', left: '', bottom: '' },
+	{ name: 'Columbia', stateAbbrev: 'SC', left: '', bottom: '' },
+	{ name: 'Pierre', stateAbbrev: 'SD', left: '', bottom: '' },
+	{ name: 'Nashville', stateAbbrev: 'TN', left: '', bottom: '' },
+	{ name: 'Austin', stateAbbrev: 'TX', left: '', bottom: '' },
+	{ name: 'Salt Lake City', stateAbbrev: 'UT', left: '', bottom: '' },
+	{ name: 'Montpelier', stateAbbrev: 'VT', left: '', bottom: '' },
+	{ name: 'Richmond', stateAbbrev: 'VA', left: '', bottom: '' },
+	{ name: 'Olympia', stateAbbrev: 'WA', left: '', bottom: '' },
+	{ name: 'Charleston', stateAbbrev: 'WV', left: '', bottom: '' },
+	{ name: 'Madison', stateAbbrev: 'WI', left: '', bottom: '' },
+	{ name: 'Cheyenne', stateAbbrev: 'WY', left: '', bottom: '' }
 ];
 
 function createCapitalBoxes(){
@@ -65,6 +65,8 @@ function createCapitalBoxes(){
 
 createCapitalBoxes();
 
+
+
 function createBoxes () {
 
 for (let state in stateCapitals) {
@@ -75,3 +77,10 @@ for (let state in stateCapitals) {
 	map.appendChild(box);
   }
 }
+
+createBoxes();
+
+let coordinateArray = [
+	{left: 18%, bottom: 19%},
+	{}
+]
