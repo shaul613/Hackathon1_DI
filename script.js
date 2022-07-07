@@ -58,3 +58,15 @@ for(let i in stateCapitals){
   elm.appendChild(text);
   document.getElementById("state_capital_boxes").appendChild(elm);
 }
+
+function createBoxes () {
+
+for (let state in stateCapitals) {
+	let box = document.createElement("div");
+	box.setAttribute("id", stateCapitals[state].stateAbbrev);
+	box.classList.add("mapboxes");
+	let map = document.getElementById("map");
+	map.appendChild(box);
+}
+}
+
