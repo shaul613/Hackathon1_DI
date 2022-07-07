@@ -66,12 +66,11 @@ function createCapitalBoxes(){
 createCapitalBoxes();
 
 function createBoxes () {
-
-for (let state in stateCapitals) {
-	let box = document.createElement("div");
-	box.setAttribute("id", stateCapitals[state].stateAbbrev);
-	box.classList.add("mapboxes");
-	let map = document.getElementById("map");
-	map.appendChild(box);
-  }
+  for (let state in stateCapitals) {
+  	let box = document.createElement("div");
+  	box.setAttribute("id", stateCapitals[state].stateAbbrev);
+  	box.classList.add("mapboxes");
+  	let map = document.getElementById("map");
+  	map.appendChild(box);
+    }
 }
