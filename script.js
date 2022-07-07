@@ -1,5 +1,5 @@
 
-var stateCapitals = [
+var stateCapitals = [ //Array of objects of state info
 	{ name: 'Montgomery', stateAbbrev: 'AL', left: '67%', bottom: '32%', width: '4%'},
 	{ name: 'Juneau', stateAbbrev: 'AK', left: '18%', bottom: '19%', width: '4%'},
 	{ name: 'Phoenix', stateAbbrev: 'AZ', left: '18%', bottom: '35%', width: '4%'},
@@ -52,6 +52,14 @@ var stateCapitals = [
 	{ name: 'Cheyenne', stateAbbrev: 'WY', left: '30%', bottom: '71%', width: '4%'}
 ];
 
+//Object containing state abbreviation and capital name only.
+//We use this later to compare state with capital.
+let stateObj = {};
+for(i in stateCapitals){
+  stateObj[stateCapitals[i].stateAbbrev] = stateCapitals[i]["name"];
+}
+
+//Function to create boxes for draggable boxes of state capitals.
 function createCapitalBoxes(){
   for(let i in stateCapitals){
     let elm = document.createElement("div");
@@ -64,10 +72,7 @@ function createCapitalBoxes(){
   }
 }
 
-createCapitalBoxes();
-
-
-
+//Function for creating target boxes on map to drag capital in to.
 function createBoxes () {
 	for (let state in stateCapitals) {
 		let box = document.createElement("div");
@@ -81,34 +86,51 @@ function createBoxes () {
 	}
 }
 
-createBoxes();
-
+//Function for handeling when user starts dragging capital box.
 function handleDrag(event){
   event.dataTransfer.setData("text", event.target.id);
 }
 
-let box = Array.from(document.getElementsByClassName("capital_drag_box"));
-for(i in box){
-  box[i].addEventListener("dragstart", handleDrag)
-}
-
-function handleDrop(event){
+//Function for hanceling when user dropps the box
+function handleDrop(){
   event.preventDefault();
   let id = event.dataTransfer.getData("text");
   let elm = document.getElementById(id);
   event.target.appendChild(elm);
 }
 
-let mapbox = Array.from(document.getElementsByClassName("mapboxes"));
-for(i in mapbox){
-  mapbox[i].addEventListener("dragenter", function(e){
-    e.preventDefault();
-  });
-  mapbox[i].addEventListener("dragover", function(e){
-    e.preventDefault();
-  });
-  mapbox[i].addEventListener("dragleave", function(e){
-    e.preventDefault();
-  });
-  mapbox[i].addEventListener("drop", handleDrop);
+//The main part of the program starts here.
+function main(){
+  createCapitalBoxes();
+  createBoxes();
+  //Creating drag event for every capital box at the bottom.
+  let box = Array.from(document.getElementsByClassName("capital_drag_box"));
+  for(let i in box){
+    box[i].addEventListener("dragstart", handleDrag)
+  }
+  //Declaring boxes on map as targets for dropping capital box.
+  let mapbox = Array.from(document.getElementsByClassName("mapboxes"));
+  for(let i in mapbox){
+    mapbox[i].addEventListener("dragenter", function(e){
+      e.preventDefault();
+    });
+    mapbox[i].addEventListener("dragover", function(e){
+      e.preventDefault();
+    });
+    mapbox[i].addEventListener("dragleave", function(e){
+      e.preventDefault();
+    });
+    mapbox[i].addEventListener("drop", function(){
+      //Getting ID of box on map (i.e. NY) and storing in variable.
+      let stateBoxId = event.target.id;
+      //Getting ID of dragged box (i.e. Albany), which is stored as transfer data.
+      let dragBoxId = event.dataTransfer.getData("text");
+      //Comparing state name and capital using property and falue of 'stateObj' object.
+      if(stateObj[stateBoxId] == dragBoxId){
+        handleDrop();
+      }
+    });
+  }
+
 }
+main();
