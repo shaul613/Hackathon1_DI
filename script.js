@@ -58,6 +58,7 @@ function createCapitalBoxes(){
     let text = document.createTextNode(stateCapitals[i].name);
     elm.appendChild(text);
     elm.classList.add("capital_drag_box");
+    elm.setAttribute("id", stateCapitals[i].name)
     elm.setAttribute("draggable", "true");
     document.getElementById("state_capital_boxes").appendChild(elm);
   }
@@ -77,3 +78,28 @@ for (let state in stateCapitals) {
 }
 
 createBoxes();
+
+function handleDrag(){
+  let box = Array.from(document.getElementsByClassName("capital_drag_box"));
+  for(i in box){
+    box[i].addEventListener("dragstart", function(e){
+      e.dataTransfer.setData("text", event.target.id);
+      console.log(e.target.id);
+    });
+  }
+  function handleDrop(){
+    let box = Array.from(document.getElementsByClassName("mapboxes"));
+    for(i in box){
+      box[i].addEventListener("dragenter", function(event){
+        e.preventDefault();
+        let id = event.dataTransfer.getData("text");
+        let elm = document.getElementById(id);
+        event.target.appendChild(elm);
+      });
+    }
+  }
+}
+
+
+
+handleDrag();
