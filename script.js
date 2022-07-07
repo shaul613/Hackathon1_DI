@@ -99,6 +99,17 @@ function handleDrop(){
   event.target.appendChild(elm);
 }
 
+function wrongState(){
+  let interval = setInterval(func, 100);
+  function func(){
+    document.body.classList.toggle("redBack");
+  }
+  setTimeout(func2, 1000);
+  function func2(){
+    clearInterval(interval);
+  }
+}
+
 //The main part of the program starts here.
 function main(){
   createCapitalBoxes();
@@ -128,6 +139,8 @@ function main(){
       //Comparing state name and capital using property and falue of 'stateObj' object.
       if(stateObj[stateBoxId] == dragBoxId){
         handleDrop();
+      } else{
+        wrongState();
       }
     });
   }
