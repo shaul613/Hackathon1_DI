@@ -101,10 +101,6 @@ function handleDrop(event){
 
 let mapbox = Array.from(document.getElementsByClassName("mapboxes"));
 for(i in mapbox){
-  // let cases = "dragenter dragover dragleave".split(" ");
-  // for(c in cases){
-  //   addPreventDefault(item[i], cases[c]);
-  // }
   mapbox[i].addEventListener("dragenter", function(e){
     e.preventDefault();
   });
@@ -116,9 +112,3 @@ for(i in mapbox){
   });
   mapbox[i].addEventListener("drop", handleDrop);
 }
-
-// function addPreventDefault(item, case){
-//   item.addEventListener(case, function(event){
-//     event.preventDefault();
-//   })
-// }
