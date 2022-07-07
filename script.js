@@ -83,27 +83,42 @@ function createBoxes () {
 
 createBoxes();
 
-function handleDrag(){
-  let box = Array.from(document.getElementsByClassName("capital_drag_box"));
-  for(i in box){
-    box[i].addEventListener("dragstart", function(e){
-      e.dataTransfer.setData("text", event.target.id);
-      console.log(e.target.id);
-    });
-  }
-  function handleDrop(){
-    let box = Array.from(document.getElementsByClassName("mapboxes"));
-    for(i in box){
-      box[i].addEventListener("dragenter", function(event){
-        e.preventDefault();
-        let id = event.dataTransfer.getData("text");
-        let elm = document.getElementById(id);
-        event.target.appendChild(elm);
-      });
-    }
-  }
+function handleDrag(event){
+  event.dataTransfer.setData("text", event.target.id);
 }
 
+let box = Array.from(document.getElementsByClassName("capital_drag_box"));
+for(i in box){
+  box[i].addEventListener("dragstart", handleDrag)
+}
 
+function handleDrop(event){
+  event.preventDefault();
+  let id = event.dataTransfer.getData("text");
+  let elm = document.getElementById(id);
+  event.target.appendChild(elm);
+}
 
-handleDrag();
+let mapbox = Array.from(document.getElementsByClassName("mapboxes"));
+for(i in mapbox){
+  // let cases = "dragenter dragover dragleave".split(" ");
+  // for(c in cases){
+  //   addPreventDefault(item[i], cases[c]);
+  // }
+  mapbox[i].addEventListener("dragenter", function(e){
+    e.preventDefault();
+  });
+  mapbox[i].addEventListener("dragover", function(e){
+    e.preventDefault();
+  });
+  mapbox[i].addEventListener("dragleave", function(e){
+    e.preventDefault();
+  });
+  mapbox[i].addEventListener("drop", handleDrop);
+}
+
+// function addPreventDefault(item, case){
+//   item.addEventListener(case, function(event){
+//     event.preventDefault();
+//   })
+// }
