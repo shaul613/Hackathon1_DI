@@ -63,9 +63,8 @@ function createCapitalBoxes(){
   }
 }
 
-<<<<<<< HEAD
 createCapitalBoxes();
-=======
+
 function createBoxes () {
 
 for (let state in stateCapitals) {
@@ -74,7 +73,5 @@ for (let state in stateCapitals) {
 	box.classList.add("mapboxes");
 	let map = document.getElementById("map");
 	map.appendChild(box);
+  }
 }
-}
-
->>>>>>> 43d8867c2ae73b9459efe9d2efdb83ef6f786764
