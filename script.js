@@ -91,7 +91,7 @@ function handleDrag(event){
   event.dataTransfer.setData("text", event.target.id);
 }
 
-//Function for hanceling when user dropps the box
+//Function for handeling when user dropps the box
 function handleDrop(){
   event.preventDefault();
   let id = event.dataTransfer.getData("text");
@@ -99,12 +99,13 @@ function handleDrop(){
   event.target.appendChild(elm);
 }
 
+//Function for handeling when user dragges capital to wrong state
 function wrongState(){
-  let interval = setInterval(func, 100);
+  let interval = setInterval(func, 100); //Causes bottom to flash red
   function func(){
     document.body.classList.toggle("redBack");
   }
-  setTimeout(func2, 1000);
+  setTimeout(func2, 1000); //End flashing after 1 second
   function func2(){
     clearInterval(interval);
   }
