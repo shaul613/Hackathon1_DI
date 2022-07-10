@@ -118,7 +118,7 @@ function main(){
   //Creating drag event for every capital box at the bottom.
   let box = Array.from(document.getElementsByClassName("capital_drag_box"));
   for(let i in box){
-    box[i].addEventListener("dragstart", handleDrag)
+    box[i].addEventListener("dragstart", handleDrag);
   }
   //Declaring boxes on map as targets for dropping capital box.
   let mapbox = Array.from(document.getElementsByClassName("mapboxes"));
@@ -133,6 +133,7 @@ function main(){
       e.preventDefault();
     });
     mapbox[i].addEventListener("drop", function(){
+
       //Getting ID of box on map (i.e. NY) and storing in variable.
       let stateBoxId = event.target.id;
       //Getting ID of dragged box (i.e. Albany), which is stored as transfer data.
