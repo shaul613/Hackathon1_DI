@@ -1,3 +1,7 @@
+// ------------
+// use let or const instead of var
+// --------------
+
 
 var stateCapitals = [ //Array of objects of state info
 	{ name: 'Montgomery', stateAbbrev: 'AL', left: '67%', bottom: '32%', width: '4%'},
@@ -55,6 +59,11 @@ var stateCapitals = [ //Array of objects of state info
 //Object containing state abbreviation and capital name only.
 //We use this later to compare state with capital.
 let stateObj = {};
+
+//-------------
+// put the code in a function
+// ----------
+
 for(i in stateCapitals){
   stateObj[stateCapitals[i].stateAbbrev] = stateCapitals[i]["name"];
 }
@@ -92,6 +101,10 @@ function handleDrag(event){
 }
 
 //Function for handeling when user dropps the box
+
+// --------------
+// pass the event as a parameter, it will be clearer
+// --------------
 function handleDrop(){
   event.preventDefault();
   let id = event.dataTransfer.getData("text");
